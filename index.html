@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My 3D CAD Model Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+    model-viewer {
+      width: 100%;
+      height: 100vh;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
 
+  <!-- 
+    CHANGE THIS ONE LINE: 
+    Replace the URL below with the public link to your own .glb file.
+    If you are hosting the model in the same folder as this HTML file, 
+    just write the filename (e.g., "my-model.glb").
+  -->
+  <model-viewer 
+    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
+    alt="A 3D model of my CAD design"
+    auto-rotate
+    camera-controls
+    ar
+    shadow-intensity="1"
+    environment-image="neutral"
+    exposure="0.8">
+  </model-viewer>
+
+  <!-- This script loads the viewer component from a CDN -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</body>
+</html>
